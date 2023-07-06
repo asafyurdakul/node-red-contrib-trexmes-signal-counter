@@ -30,6 +30,7 @@ module.exports = function(RED) {
 				{
 					signalcount = 0;
 					node.status({fill:"yellow", shape:"dot", text:`Count: ${signalcount}`});	
+					node.send({ payload : signalcount });
 					return;
 				}
 			} 
@@ -39,7 +40,9 @@ module.exports = function(RED) {
 			}
 			prevValue = msg.payload;			
 			
-			node.status({fill:"green", shape:"dot", text:`Count: ${signalcount}`});			
+			node.status({fill:"green", shape:"dot", text:`Count: ${signalcount}`});	
+
+			node.send({ payload : signalcount });
 
         });
     }
