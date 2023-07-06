@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-trexmes-signal-counter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Node-RED node that when message passes from 0 to 1, the counter increments by 1.",
   "main": "signal-counter.js",
   "scripts": {
